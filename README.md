@@ -1,6 +1,6 @@
 
-## PART1 : Image Segmentation(#Image-Segmentation)
-## PART2 : Object Recognition and Labelling(#Object-Recognition-and-Labelling)
+## PART1 : [Image Segmentation](#Image-Segmentation)
+## PART2 : [Object Recognition and Labelling](#Object-Recognition-and-Labelling)
 
 ## Image Segmentation
 ### Cluster based segmentation using ROS node with PCL
