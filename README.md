@@ -86,6 +86,8 @@ $ rosrun sensor_stick segmentation
 ### Object Recognition and Labelling using features
 Here, a classifier is trained to detect the objects kept on the table.
 
+![OBJ RECOG](https://github.com/ashutoshtiwari13/ROS-PCL-Segmentation/blob/master/object_recognize/obj_recognize.png)
+
 ## Setup
 1. We need to make use of the `object_recognize` directory cloned from the previous step.
 
