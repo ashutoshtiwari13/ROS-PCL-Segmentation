@@ -7,6 +7,8 @@ This is a mini-project for creating a ```ROS node``` for image segmentation on a
 ### Setup
 The Gazebo world with the same table top and random objects from ```ransac_pointcloud``` directory is used. A simple stick robot with an RGB-D camera attached to its head via a pan-tilt joint is placed in front of the table.
 
+NOTE : The underlying PCL filteration methods can be foudn in the ![RANSAC_pointcloud](https://github.com/ashutoshtiwari13/ROS-PCL-Segmentation/tree/master/ransac_pointcloud) directory.
+
 1. Clone the repo to the ```/src``` directory of the ROS workspace.
 ```sh
 git clone https://github.com/ashutoshtiwari13/ROS-PCL-Segmentation.git
@@ -45,10 +47,10 @@ Note : source the ```~/.bashrc ``` too if error occurs
 $ roslaunch roslaunch sensor_stick robot_spawn.launch
 ```
 
-![PCL](https://github.com/ashutoshtiwari13/ROS-PCL-Segmentation/tree/master/sensor_stick/pcl1.png)
+![PCL](https://github.com/ashutoshtiwari13/ROS-PCL-Segmentation/blob/master/sensor_stick/pcl1.png)
 
 7. Start the image segmentation node
 ```sh
 $ rosrun sensor_stick segmentation
 ```
-![PCL2](https://github.com/ashutoshtiwari13/ROS-PCL-Segmentation/tree/master/sensor_stick/pcl2.png)
+![PCL2](https://github.com/ashutoshtiwari13/ROS-PCL-Segmentation/blob/master/sensor_stick/pcl2.png)
