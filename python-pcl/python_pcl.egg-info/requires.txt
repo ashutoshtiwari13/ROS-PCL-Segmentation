@@ -1,0 +1,4 @@
+filelock
+nose
+numpy
+Cython>=0.25.2
