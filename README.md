@@ -1,3 +1,7 @@
+
+## PART1 : Image Segmentation(#Cluster-based-segmentation-using-ROS-node-with-PCL)
+## PART2 : Object Recognition and Labelling(#Object-Recognition-and-Labelling-using-features)
+
 ## Cluster based segmentation using ROS node with PCL
 
 This is a mini-project on creating a ```ROS node``` for image segmentation for objects kept on a cluttered table with PCL(Point Cloud Library). It is run and tested on the Udacity simulator ```robo-nd``` environment.
@@ -67,7 +71,7 @@ Note : source the ```~/.bashrc ``` too if error occurs
 
 6. Start the simulation with ROS Launch
 ```sh
-$ roslaunch roslaunch sensor_stick robot_spawn.launch
+$ roslaunch sensor_stick robot_spawn.launch
 ```
 
 ![PCL](https://github.com/ashutoshtiwari13/ROS-PCL-Segmentation/blob/master/sensor_stick/pcl1.png)
@@ -77,3 +81,46 @@ $ roslaunch roslaunch sensor_stick robot_spawn.launch
 $ rosrun sensor_stick segmentation
 ```
 ![PCL2](https://github.com/ashutoshtiwari13/ROS-PCL-Segmentation/blob/master/sensor_stick/pcl2.png)
+
+
+## Object Recognition and Labelling using features
+Here, a classifier is trained to detect the objects kept on the table.
+
+## Setup
+1. We need to make use of the `object_recognize` directory cloned from the previous step.
+
+Note :  Completing the PART1 of the project is a must to run PART2
+
+2. Make sure you have all the dependencies resolved by using the rosdep install tool and run `catkin_make`:
+
+```sh
+$ cd ~/catkin_ws
+$ rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
+$ catkin_make
+```
+
+5. Add following to your .bashrc file.
+```sh
+export GAZEBO_MODEL_PATH=~/catkin_ws/src/object_recognize/models
+source ~/catkin_ws/devel/setup.bash
+```
+Note : source the ```~/.bashrc ``` too if error occurs
+
+6. Launch the `training.launch` file to bring up the Gazebo environment. Only a empty scene is seen with only a sensor stick robot
+```sh
+$ roslaunch object_recognize training.launch
+```
+7. Capture and save the features of each of the object in the environment and run the below command to generate a `training_set.sav` file
+
+```sh
+$ rosrun sensor_stick capture_features.py
+```
+
+8. For Training, make sure to install the `sklearn & scipy` packages
+```sh
+pip install sklearn scipy
+```
+Run the `train_svm.py` model to train an SVM classifier on your labeled set of features.
+```sh
+$ rosrun sensor_stick train_svm.py
+```
