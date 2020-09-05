@@ -2,7 +2,7 @@
 ## PART1 : Image Segmentation(#Cluster-based-segmentation-using-ROS-node-with-PCL)
 ## PART2 : Object Recognition and Labelling(#Object-Recognition-and-Labelling-using-features)
 
-## Cluster based segmentation using ROS node with PCL
+### Cluster based segmentation using ROS node with PCL
 
 This is a mini-project on creating a ```ROS node``` for image segmentation for objects kept on a cluttered table with PCL(Point Cloud Library). It is run and tested on the Udacity simulator ```robo-nd``` environment.
 
@@ -83,7 +83,7 @@ $ rosrun sensor_stick segmentation
 ![PCL2](https://github.com/ashutoshtiwari13/ROS-PCL-Segmentation/blob/master/sensor_stick/pcl2.png)
 
 
-## Object Recognition and Labelling using features
+### Object Recognition and Labelling using features
 Here, a classifier is trained to detect the objects kept on the table.
 
 ## Setup
