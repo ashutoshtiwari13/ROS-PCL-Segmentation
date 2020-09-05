@@ -3,7 +3,7 @@
 This is a mini-project on creating a ```ROS node``` for image segmentation for objects kept on a cluttered table with PCL(Point Cloud Library). It is run and tested on the Udacity simulator ```robo-nd``` environment.
 
 ## Details
-- [Project Heads-up](#Project-Heads--up)
+- [Project Heads-up](#Project-Heads-up)
 - [Setup](#Setup)
 
 ### Project Heads-up
