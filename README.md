@@ -11,11 +11,11 @@ The Gazebo world with the same table top and random objects from ```ransac_point
 ```sh
 git clone https://github.com/ashutoshtiwari13/ROS-PCL-Segmentation.git
 ```
-2. Install the Cython utility
+2. Install the ```Cython``` utility
 ```sh
 $ sudo pip install cython
 ````
-3. Build and install pcl-python
+3. Build and install ```pcl-python```
 
 ```sh
 $ cd python-pcl
